@@ -1,4 +1,6 @@
-# Assignment 11
+<img src="https://datasciencedegree.wisconsin.edu/wp-content/themes/data-gulp/images/logo.svg" width="300">
+
+# Assignment 11, Data Science 710
 
 * Do the Python problems and submit your results in `assignment11_python.ipynb`.
 * Do the R problems and submit a `.docx` or `.pdf` file (pdf preferred) to GitHub containing your R script, output, and interpretations.
