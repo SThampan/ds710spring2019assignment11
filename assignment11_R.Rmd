@@ -1,0 +1,81 @@
+---
+title: "Assignment 11--R"
+author: "Insert your name here"
+date: ""
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Amazon Reviews
+In this problem, you will use R to do further analysis on the Amazon reviews data.  Where relevant, you are encouraged to use functions from `dplyr` and `ggformula`.
+
+Load necessary libraries here.
+```{r}
+
+```
+
+### Reading and cleaning the data
+a. In the Python assignment for homework 11, you created a `.csv` file with information about Amazon reviews.  Using what you learned about reading files efficiently, read this data set into R.
+
+```{r}
+
+```
+
+b. Examine the helpful fraction column for unrealistic values.  (There should be more than 0 but fewer than 100 unrealistic values.  If this isn't what you got, double-check your Python code.)  
+
+- Set unrealistic values to missing.
+- Also set to missing the corresponding value of the total votes column.
+  - (Because you computed the helpful fraction from the columns "helpful votes" and "total votes," an unrealistic value of "helpful fraction" means that at least one of the other two values must be unrealistic.  Because we don't know which one, the safest course is to set them both to missing.)
+
+```{r}
+
+```
+
+c. **Write 1-2 sentences** to document how many unrealistic values you found, what made them unrealistic, and the fact that you set those values to missing.
+
+### Investigating helpful reviews
+
+d. Create a new variable that describes whether more than 50% of people who voted on a review considered it helpful.  We will call these helpful reviews.
+
+```{r}
+
+```
+
+e. In this question, you will investigate the question, "Are helpful reviews longer than unhelpful ones?"  Start by making appropriate graphical summaries to help you decide whether to transform the review length.  Then do a hypothesis test of whether the typical length of helpful reviews is longer than the typical length of unhelpful reviews.
+```{r}
+
+```
+
+**State your conclusion** in context.
+
+### Relationship between reviews and votes
+
+In this part of the assignment, you will investigate whether there is a relationship between the number of reviews a product has and the number of times the reviews have been voted on (as helpful vs. unhelpful).
+
+- Intuitively, it seems that products that have been on Amazon longer may have more reviews, and may also have accumulated more votes on their reviews.  You will investigate whether this is supported by the data.
+
+f. For each product ID, find the maximum number of votes received by any of the product's reviews.  Also count the number of reviews for each product ID.
+```{r}
+
+```
+
+Hints to help you check your work:  
+
+- The number of elements in each of the resulting tbls or vectors should equal the total number of unique product IDs.
+- The sum of the number of reviews for each product ID should equal the total number of reviews.
+
+g. Make a scatterplot of max number of votes as a function of number of reviews.
+```{r}
+
+```
+Is there a visible trend?  If so, **describe it.**
+
+h. Histograms of the review counts and number of votes indicate that both variables are right-skewed.  (You can check this for yourself.)  So, a log scale might be helpful in investigating the relationship between them.  Modify your scatterplot to use log scales on both axes.
+```{r}
+
+```
+
+Is there a visible trend?  If so, **describe it.**  Does this tell us anything about the relationship between max votes and number of reviews *without* the log scale?
